@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 function Header() {
   return (
     <nav className="header">
-      {/*logo left */}
       <Link to="/">
         <img
           className="headerLogo"
@@ -14,13 +14,41 @@ function Header() {
           alt="logo"
         />
       </Link>
-      {/*search box */}
+
       <div className="headerSearch">
         <input type="text" className="headerSearchInput" />
         <SearchIcon className="headerSearchIcon" />
       </div>
-      {/*3 links  */}
 
+      <div className="headerNav">
+        <Link to="/login" className="headerLink">
+          <div className="headerOption">
+            <span className="headerOptionLine1">Hello,</span>
+            <span className="headerOptionLine2">Sign in</span>
+          </div>
+        </Link>
+
+        <Link to="/" className="headerLink">
+          <div className="headerOption">
+            <span className="headerOptionLine1">Returns</span>
+            <span className="headerOptionLine2">& Orders</span>
+          </div>
+        </Link>
+
+        <Link to="/" className="headerLink">
+          <div className="headerOption">
+            <span className="headerOptionLine1">Your</span>
+            <span className="headerOptionLine2">Prime</span>
+          </div>
+        </Link>
+
+        <Link to="/checkout" className="headerLink">
+          <div className="headerOptionBasket">
+            <ShoppingBasketIcon />
+            <span className="headerOptionLine2 headerBasketCount">0</span>
+          </div>
+        </Link>
+      </div>
       {/*basket icon link w/ number */}
     </nav>
   );
