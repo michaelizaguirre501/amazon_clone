@@ -19,6 +19,45 @@ function Home() {
           rating={5}
           image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
         />
+        <Product
+          id="12345"
+          title="Example"
+          price="15.00"
+          rating={5}
+          image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
+        />
+      </div>
+      <div className="homeRow">
+        <Product
+          id="12345"
+          title="Example"
+          price="15.00"
+          rating={5}
+          image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
+        />
+        <Product
+          id="12345"
+          title="Example"
+          price="15.00"
+          rating={5}
+          image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
+        />
+        <Product
+          id="12345"
+          title="Example"
+          price="15.00"
+          rating={5}
+          image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
+        />
+      </div>
+      <div className="homeRow">
+        <Product
+          id="12345"
+          title="Example"
+          price="15.00"
+          rating={5}
+          image="https://m.media-amazon.com/images/I/71rhMv9KDYL._AC_SX679_.jpg"
+        />
       </div>
     </div>
   );
