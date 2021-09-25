@@ -1,6 +1,3 @@
-//set up data layer
-//track basket
-
 import React, { createContext, useContext, useReducer } from "react";
 
 //Data layer
