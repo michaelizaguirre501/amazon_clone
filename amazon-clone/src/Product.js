@@ -1,9 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  const history = useHistory();
+  const noUserAdd = () => {
+    history.push("/login");
+  };
 
   const addToBasket = () => {
     //Add item to basket
@@ -36,7 +41,7 @@ function Product({ id, title, image, price, rating }) {
         </div>
       </div>
       <img src={image} alt="" />
-      <button onClick={addToBasket}>Add To Basket</button>
+      <button onClick={!user ? noUserAdd : addToBasket}>Add To Basket</button>
     </div>
   );
 }
